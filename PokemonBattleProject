@@ -1,0 +1,77 @@
+Unit 3: Pokemon Battle Project
+
+Complete this programming lab using your notes, your textbook, and any online or in-class sources you like.  You and a classmate will work on this together; you will want to discuss procedural decomposition with each other, but you must write all code on your own (each person is responsible for their own submission).  To receive full credit on this lab, you must submit a planning document to show how you plan to solve this challenge, and you MUST also comment your code. 
+
+Before starting the lab, recall how to use Scanner to get user input:
+
+Scanner console = new Scanner(System.in);
+
+System.out.print("Hello, what is your name? ");
+String name = console.nextLine();
+
+System.out.print("What is your age? ");
+int age = console.nextInt();
+
+Part 1 - Introduction
+
+Write a method called battleStart() that introduces the battle, prompts the user to choose their first Pokemon character for battle (for this lab, we will limit the user to choosing Arcanine, Beedrill, or Caribolt - see here for the stats you will use), and outputs the pairing (for this program we will assume our adversary will always be Zebstrika).  battleStart() should also return the name of the Pokemon chosen by the user. Your output should look something like this:
+
+Another trainer is issuing a challenge!
+
+Zebstrika appears.
+
+Which Pokemon do you choose? Arcanine
+
+You chose Arcanine!
+
+It’s a Pokemon battle between Arcanine and Zebstrika!  Go!
+
+Call battleStart() from your main() method and store the name of the Pokemon chosen in a variable. Remember that your user can choose one of three Pokemon characters (Arcanine, Beedrill, or Caribolt) to fight Zebstrika. This should be a clue that you may have to use some if statements.
+
+
+Part 2 - Battle
+
+Write a method called damage() that takes a Pokemon’s name as a parameter and prints the amount of HP after damage has been done (HP after damage has been done is the original HP minus the result of the damage equation shown below).  damage() should prompt the user for their base stats in order to calculate damage (use this doc to look up stats for each of the Pokemon characters we are allowing our user to choose).  Use the following equations for calculating damage:
+
+
+Hint: The Pokemon game always selects a random number between 0.85 and 1.0.	
+
+Ideally, your output should look similar to this, once you’ve run your main method, calling damage() within that main method:
+
+Zebstrika used Thunderbolt!
+Trainer, what are your Caribolt's stats? (name will be dependent on which Pokemon they chose)
+
+Pokemon: Caribolt
+Level: 100
+Base: 106
+HP: 309
+Attack: 311
+Defense: 201
+Speed: 342
+SP Attack: 171
+SP Defense: 196
+STAB: 1.5
+Move 1: Jolly
+Move 2: Galvanize
+Move 3: Magnet
+Move 4: Healthy
+ 
+Caribolt sustained 137.7 points damage.
+HP, after damage, is now 171.
+
+Be sure to also return the value of damage from the damage equation, in the damage() method.
+
+Some things to think about, as you are planning:
+
+- How are you going to output the proper print statements and stats to the screen depending on the Pokemon character your user chooses to fight Zebstrika?
+
+- How are you going to call the battleStart() and damage() methods that you created? Would it make sense to create objects first? You decide.
+
+- Is there an instance in your program where it might be useful to have a getter method? Read up on getter methods here, and look at previous programs we did together to help you figure this out.
+
+- Hint: You may also want to override the given Java toString() method with your own, somewhere in this program.
+
+
+**Stay tuned for the extension portion of this lab…(there is more to come!)**
+
+Please upload your code for Parts 1 and 2 here, along with a screenshot of your output.
